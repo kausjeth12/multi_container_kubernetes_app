@@ -16,8 +16,8 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service_account.json
   - gcloud config set project multi-container-kubernetes-app
-  - gcloud config set compute/zone asia-south-1a
-  - gcloud container clusters get-credentials multi-container-kubernetes-app
+  - gcloud config set compute/zone asia-south1
+  - gcloud container clusters get-credentials complex-kubernetes-app
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t kausjethdoc/react-test -f ./client/Dockerfile.dev ./client
 script:
