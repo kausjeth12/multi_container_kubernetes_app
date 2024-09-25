@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+metadata:
+  name: kaushaljethva07-site-tls
+spec:
+  secretName: kaushaljethva07-site
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: kaushaljethva07.site
+  dnsNames:
+    - kaushaljethva07.site
+    - www.kaushaljethva07.site
