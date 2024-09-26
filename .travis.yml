@@ -10,14 +10,14 @@ env:
     # This will not ask any user prompt
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
-  - openssl aes-256-cbc -K $encrypted_c238d24feed3_key -iv $encrypted_c238d24feed3_iv -in gentle-vista-436716-a8-808184c7bb1b.json.enc -out gentle-vista-436716-a8-808184c7bb1b.json -d
+  - openssl aes-256-cbc -K $encrypted_248d61edfafe_key -iv $encrypted_248d61edfafe_iv -in service_account.json.enc -out service_account.json -d
   - curl https://sdk.cloud.google.com | bash;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate-service-account --key-file gentle-vista-436716-a8-808184c7bb1b.json
-  - gcloud config set project gentle-vista-436716-a8
+  - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud config set project multi-kubernetes-app
   - gcloud config set compute/zone asia-south1
-  - gcloud container clusters get-credentials complex-kubernetes-app
+  - gcloud container clusters get-credentials multi-kubernetes-container-app
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t kausjethdoc/react-test -f ./client/Dockerfile.dev ./client
 script:
