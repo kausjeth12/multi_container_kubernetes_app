@@ -1,4 +1,4 @@
-### How to setup deployment
+# How to setup deployment
 
 ## Google cloud setup
 
@@ -16,7 +16,7 @@
 3. gem install travis
 4. travis login --github-token <token>
 5. travis encrypt-file <service_account.json> -r <git_username>/<repo_name> and follow the step mentioned on the screen.
-6. Note!!! ---> Remove the actual file of service account from directory
+6. _Note!!! ---> Remove the actual file of service account from directory_
 
 ## Travis configurations
 
@@ -45,7 +45,7 @@ Perform this task on kubernetes cluster cloud shell
    3. Run: kubectl get service ingress-nginx-controller --namespace=ingress-nginx
 3. Once ingress-nginx-controller installed, add IP to the domain registart site against domain name.
 
-# Install Cert manager using helm
+## Install Cert manager using helm
 
 1. Run: helm repo add jetstack https://charts.jetstack.io
 2. Run: helm repo update
