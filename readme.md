@@ -31,7 +31,7 @@
    2. gcloud config set compute/zone <zone>
    3. gcloud container clusters get-credentials <cluster_name>
 2. Create require secrets on kubernetes cluster
-   1. kubectl create secret generic <secret_name> --from-literal <key>=<value>
+   1. kubectl create secret generic <secret*name> --from-literal <key*>=<value\_>
 
 ## Install ingress nginx service
 
