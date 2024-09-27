@@ -17,16 +17,16 @@ spec:
   ingressClassName: nginx
   rules:
     - host: kaushaljethva07.site
-    - http:
+      http:
         paths:
-          - path: /?(.*)
+          - path: /(.*)
             pathType: ImplementationSpecific
             backend:
               service:
                 name: client-srv
                 port:
                   number: 3000
-          - path: /api/?(.*)
+          - path: /api/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
@@ -34,16 +34,16 @@ spec:
                 port:
                   number: 5000
     - host: www.kaushaljethva07.site
-    - http:
+      http:
         paths:
-          - path: /?(.*)
+          - path: /(.*)
             pathType: ImplementationSpecific
             backend:
               service:
                 name: client-srv
                 port:
                   number: 3000
-          - path: /api/?(.*)
+          - path: /api/(.*)
             pathType: ImplementationSpecific
             backend:
               service:
