@@ -7,7 +7,6 @@
 3. Create kubernetes cluster
 4. Maintain Travis yaml file or as per the deployment environment
 5. Create Service account from IAM & Admin section and assign role as kubernetes engine admin, after that create a key and download it as json and keep it at safe place.
-6.
 
 ## Create encrypted file of service account
 
@@ -16,7 +15,7 @@
 3. gem install travis
 4. travis login --github-token <token>
 5. travis encrypt-file <service_account.json> -r <git_username>/<repo_name> and follow the step mentioned on the screen.
-6. _Note!!! ---> Remove the actual file of service account from directory_
+6. **Note!!! ---> Remove the actual file of service account from directory**
 
 ## Travis configurations
 
@@ -31,7 +30,7 @@
    2. gcloud config set compute/zone <zone>
    3. gcloud container clusters get-credentials <cluster_name>
 2. Create require secrets on kubernetes cluster
-   1. kubectl create secret generic <secret*name> --from-literal <key*>=<value\_>
+   1. kubectl create secret generic <secret_name> --from-literal <**key**>=<**value**>
 
 ## Install ingress nginx service
 
