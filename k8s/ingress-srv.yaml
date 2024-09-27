@@ -11,8 +11,8 @@ metadata:
 spec:
   tls:
     - hosts:
-        - kaushaljethva07.com
-        - www.kaushaljethva07.com
+        - kaushaljethva07.site
+        - www.kaushaljethva07.site
       secretName: kaushaljethva07-site
   ingressClassName: nginx
   rules:
