@@ -1,5 +1,5 @@
 docker build -t kausjethdoc/complex_client:latest -t kausjethdoc/complex_client:$SHA -f ./client/Dockerfile ./client
-docker build -t kausjethdoc/complex_server:latest -t kausjethdoc/complex_server:$SHA -f ./servert/Dockerfile ./server
+docker build -t kausjethdoc/complex_server:latest -t kausjethdoc/complex_server:$SHA -f ./server/Dockerfile ./server
 docker build -t kausjethdoc/complex_worker:latest -t kausjethdoc/complex_worker:$SHA -f ./worker/Dockerfile ./worker
 docker push kausjethdoc/complex_client:latest
 docker push kausjethdoc/complex_client:$SHA
