@@ -14,7 +14,7 @@
 2. Run command: docker run -it -v $(pwd):/app ruby:<latest_version> sh
 3. gem install travis
 4. travis login --github-token <token>
-5. travis encrypt-file <service_account.json> -r <git_username>/<repo_name> and follow the step mentioned on the screen.
+5. travis encrypt-file <service_account.json> -r <git_username>/<repo_name> and follow the step mentioned on the screen..
 6. **Note!!! ---> Remove the actual file of service account from directory**
 
 ## Travis configurations
